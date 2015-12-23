@@ -62,12 +62,12 @@ You must create a new branch when working on a new feature.
 
   - **master**: The production branch. Must always be stable and deployable.
   - **hotfix**: A tempory branch from master to make hotfix
-  - **IterationName**: Specific branch for an iteration
-  - **US_xxxxx**: Where *xxxxx* is the name of the User Story of the iteration 
+  - **it-xxxxx**: Where *xxxxx* is the iteration name
+  - **st-xx-yyyyy**: Where *xx* is the id of the Story of the iteration and *yyyyy* is a shortname for the story
   - **develop**: This branch can contains many iterations
   - **release**: When there are enough iterations in branch 'develop' , pass it on branch 'release' to be checked (before to be put on the master branch)
 
-:warning: All **US_xxxxx** branches must be created in same time from the IterationName branch, because **US_xxxxx** must be independent.
+:warning: All **st-xx-yyyyy** branches must be created at the same time from the **it-xxxxx** branch, because every **st-xx-yyyyy** must be independent. But a story that need another story as a requirement can be created from the required one.
 
 Follow the Git-flow works : 
 
