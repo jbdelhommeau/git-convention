@@ -4,9 +4,12 @@
 
   1. [Repositories](#repositories)
   1. [Branching](#branching)
+  1. [Pull requests and Code Review](#pull-requests)
   1. [Start a feature](#start-feature)
   1. [Commit message](#commit-message)
   1. [Tips and Tricks](#tips-tricks)
+    1. [Gitg](#gitg)
+    1. [Alias](#alias)
   1. [Credits](#credits)
 
 **You shall in english write your repositories, commit message and branch names.**
@@ -76,21 +79,27 @@ You must create a new branch when working on a new feature.
 
     > This branch can contain many iterations.
 
-  - **iteration-xxxxx**:
+  - **IterationName**:
 
     > Iteration specific branch.
 
-  - **story-xx-yyyyy**:
-  
-    > User Story branch where *xx* is the story id and *yyyyy* is a shortname for the story.
+  - **US-xxxxx**:
 
-:warning: It is important to make User Story branches independent from the Iteration branch so they can be merged independently into develop branch if needed. But if a story needs another story as a requirement, it can be created from the required one.
+    > User Story branch where *xxxxx* is the name of the User Story.
 
-All **story-xx-yyyyy** should therefore be created at the same time from the develop branch or from the `iteration-xxxxx` branch when it's first created. 
+:warning: It is important to make User Story branches independent from the Iteration branch so they can be merged independently into develop branch if needed.
+All **US-xxxxx** should therefore be created at the same time from the develop branch or from the `Iteration branch` when it's first created.
 
 Follow the Git-flow works :
 
 <img src="http://nvie.com/img/git-model@2x.png" align="center" height="500"/ >
+
+## <a name='pull-requests'>Pull requests and Code Review</a>
+Code review is an important part of our process and it will now be integrated in our branching methods.
+Anytime a Story branch is completed it will be merged back into the Iteration branch through a Pull request.
+At that time the code review will happen.
+
+@todo: Detail the procedure
 
 ## <a name='start-feature'>Start an iteration</a>
 
@@ -99,10 +108,10 @@ Follow the Git-flow works :
 $ git fetch origin
 
 # Create an iteration branch
-$ git checkout -b iteration-xxxxx origin/master
+$ git checkout -b IterationName origin/master
 
 # Create an new branch for an user story
-$ git checkout -b story-xx-yyyyy origin/master
+$ git checkout -b US-xxxxxx origin/master
 
 # When you're ready, create a pull request following the convention
 ```
@@ -169,12 +178,16 @@ ABC-XXX #closed
 ## <a name='tips-tricks'>Tips and tricks</a>
 
 
-### Use Gitg :bulb:
+### <a name='gitg'>Use Gitg :bulb:
 
 [Gitg](https://wiki.gnome.org/Apps/Gitg) is a graphical user interface for git. It aims at being a small,
 fast and convenient tool to visualize the history of git repositories.
 Besides visualization, [gitg](https://wiki.gnome.org/Apps/Gitg) also provides several utilities to manage your
 repository and commit your work.
+
+### <a name='alias'>Alias
+
+@todo: Add useful aliases
 
 ### Select hunks for better commit
 
