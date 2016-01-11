@@ -10,6 +10,7 @@
   1. [Tips and Tricks](#tips-tricks)
     1. [Gitg](#gitg)
     1. [Config](#config)
+  1. [Proposal](#proposal)
   1. [Credits](#credits)
 
 **You shall in English write your repositories, commit message and branch names.**
@@ -246,6 +247,19 @@ e - manually edit the current hunk
 # without sending feature part
 
 ```
+
+## <a name='proposal'>Proposal</a>
+
+To propose a new modification on a convention repository it's necessary to follow this process:
+
+- clone repository on local
+- create a new branch prefixed by *-proposal
+- push new branch with some good stuff
+- create a pull request with github interface
+- wait for votes
+
+In order to validate a *pull request*, it's required the half of the team validate it. ( :+1: )
+
 
 ## <a name='credits'>Credits</a>
 
