@@ -12,7 +12,7 @@
     1. [Alias](#alias)
   1. [Credits](#credits)
 
-**You shall in english write your repositories, commit message and branch names.**
+**You shall in English write your repositories, commit message and branch names.**
 ## <a name='repositories'>Repositories</a>
 ### Naming
 
@@ -162,7 +162,7 @@ ABC-XXX #closed
     > Should represent a documentation changes
 
 - **refactor**: `refact(MessageService): change message generation process`
-    > A change for better readablilty (Don't add feature or fix bug)
+    > A change for better readability (Don't add feature or fix bug)
 
 - **performance**: `perf(UrlGenerator): Replace libA for libB`
     > Should represent a performance improvement
