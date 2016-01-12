@@ -253,7 +253,7 @@ e - manually edit the current hunk
 To propose a new modification on a convention repository it's necessary to follow this process:
 
 - clone repository on local
-- create a new branch prefixed by *-proposal
+- create a new branch suffixed by *-proposal
 - push new branch with some good stuff
 - create a pull request with github interface
 - wait for votes
