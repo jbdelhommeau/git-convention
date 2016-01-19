@@ -108,10 +108,10 @@ At that time the code review will happen.
 $ git fetch origin
 
 # Create an iteration branch
-$ git checkout -b IterationName origin/master
+$ git checkout -b IterationName origin/develop
 
 # Create an new branch for an user story
-$ git checkout -b US-xxxxxx origin/master
+$ git checkout -b US-xxxxxx origin/develop
 
 # When you're ready, create a pull request following the convention
 ```
