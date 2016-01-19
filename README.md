@@ -9,10 +9,11 @@
   1. [Commit message](#commit-message)
   1. [Tips and Tricks](#tips-tricks)
     1. [Gitg](#gitg)
-    1. [Alias](#alias)
+    1. [Config](#config)
+  1. [Proposal](#proposal)
   1. [Credits](#credits)
 
-**You shall in english write your repositories, commit message and branch names.**
+**You shall in English write your repositories, commit message and branch names.**
 ## <a name='repositories'>Repositories</a>
 ### Naming
 
@@ -162,7 +163,7 @@ ABC-XXX #closed
     > Should represent a documentation changes
 
 - **refactor**: `refact(MessageService): change message generation process`
-    > A change for better readablilty (Don't add feature or fix bug)
+    > A change for better readability (Don't add feature or fix bug)
 
 - **performance**: `perf(UrlGenerator): Replace libA for libB`
     > Should represent a performance improvement
@@ -185,18 +186,31 @@ fast and convenient tool to visualize the history of git repositories.
 Besides visualization, [gitg](https://wiki.gnome.org/Apps/Gitg) also provides several utilities to manage your
 repository and commit your work.
 
-### <a name='alias'></a>Alias
+### <a name='config'></a>Global config
 
-To increase your productivity you can use some bash aliases (works on zsh to):
+Set filemode to false for ignore when files mode change.
 
 ```bash
-# Get all history branch more graphically
-alias gilog="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+    git config --global core.filemode false
+```
 
-# Some shortcuts
-alias gidiff='git diff'
-alias gist='git status'
-alias gich='git checkout'
+To increase your productivity you can use some aliases:
+
+```bash
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+
+# Get all history branch more graphically like network
+git config --global alias.net "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+
+#Required gitg
+git config --global alias.ui "!gitg"
 ```
 
 ### Select hunks for better commit
@@ -233,6 +247,19 @@ e - manually edit the current hunk
 # without sending feature part
 
 ```
+
+## <a name='proposal'>Proposal</a>
+
+To propose a new modification on a convention repository it's necessary to follow this process:
+
+- clone repository on local
+- create a new branch suffixed by *-proposal
+- push new branch with some good stuff
+- create a pull request with github interface
+- wait for votes
+
+In order to validate a *pull request*, it's required the half of the team validate it. ( :+1: )
+
 
 ## <a name='credits'>Credits</a>
 
