@@ -12,6 +12,7 @@
     1. [Config](#config)
   1. [Proposal](#proposal)
   1. [Credits](#credits)
+  1. [Tools](#tools)
 
 **You shall in English write your repositories, commit message and branch names.**
 ## <a name='repositories'>Repositories</a>
@@ -174,21 +175,6 @@ ABC-XXX #closed
 - **misc**: `misc(Dockerfile): Change node version to 0.12`
     > Changes that didn't match any other categories
 
-##### Using commitizen to write good commit messages
-![alt tag](https://raw.githubusercontent.com/naoned/git-convention/dirty-harry-conventions/screenshots/add-commit.png)
-
-Your repo needs a package.json for this to work. So `npm init`...
-You may want to set `license` to `UNLICENSED` and `private` to `true` in the `package.json`.
-
-Install commitizen and initialize your repo with our conventions :
-```
-npm install -g commitizen
-commitizen init naoned-cz-conventional-changelog --save --save-exact
-```
-
-Now, simply use `git cz` instead of `git commit` when committing and you will be prompted with questions to help you write your commit messages.
-
-
 ## <a name='tips-tricks'>Tips and tricks</a>
 
 
@@ -279,3 +265,23 @@ In order to validate a *pull request*, it's required the half of the team valida
   - http://blogs.atlassian.com/2014/01/simple-git-workflow-simple/
   - https://gist.github.com/jbenet/ee6c9ac48068889b0912
   - https://github.com/blog/1124-how-we-use-pull-requests-to-build-github
+
+## <a name="tools">Tools</a>
+
+#### Using commitizen to write good commit messages
+
+![Commitizen command line tool](https://raw.githubusercontent.com/naoned/git-convention/dirty-harry-conventions/screenshots/add-commit.png)
+
+Your repo needs a package.json for this to work. So `npm init`...
+You may want to set `license` to `UNLICENSED` and `private` to `true` in the `package.json`.
+
+Install commitizen and naoned-conventions-npm :
+```
+npm install -g commitizen naoned-conventions-npm
+```
+And in your repo root folder :
+```
+naoned init-git
+```
+
+Now, simply use `git cz` instead of `git commit` when committing and you will be prompted with questions to help you write your commit messages.
