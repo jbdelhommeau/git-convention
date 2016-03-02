@@ -174,6 +174,19 @@ ABC-XXX #closed
 - **misc**: `misc(Dockerfile): Change node version to 0.12`
     > Changes that didn't match any other categories
 
+##### Using commitizen to write good commit messages
+![alt tag](https://raw.githubusercontent.com/naoned/git-convention/dirty-harry-conventions/screenshots/add-commit.png)
+
+Your repo needs a package.json for this to work. So `npm init`...
+You may want to set `license` to `UNLICENSED` and `private` to `true` in the `package.json`.
+
+Install commitizen and initialize your repo with our conventions :
+```
+npm install -g commitizen
+commitizen init naoned-cz-conventional-changelog --save --save-exact
+```
+
+Now, simply use `git cz` instead of `git commit` when committing and you will be prompted with questions to help you write your commit messages.
 
 
 ## <a name='tips-tricks'>Tips and tricks</a>
