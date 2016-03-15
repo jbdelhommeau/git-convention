@@ -194,6 +194,12 @@ Set filemode to false for ignore when files mode change.
     git config --global core.filemode false
 ```
 
+Set automatic rebase to avoid branch merging while pulling
+
+```bash
+    git config --global branch.autosetuprebase always
+```
+
 To increase your productivity you can use some aliases:
 
 ```bash
